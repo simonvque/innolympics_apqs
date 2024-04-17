@@ -6,6 +6,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFEDEDED),
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(0),
         child: Container(),
@@ -17,7 +18,8 @@ class LoginPage extends StatelessWidget {
             'HANDY MANNING',
             style: TextStyle(
               fontSize: 24.0,
-              fontWeight: FontWeight.bold,
+              fontFamily: 'Montserrat-SemiBold',
+              color: Color(0xFF4180A3),
             ),
           ),
           SizedBox(height: 10),
@@ -25,7 +27,8 @@ class LoginPage extends StatelessWidget {
             'Login',
             style: TextStyle(
               fontSize: 16.0,
-              fontWeight: FontWeight.bold,
+              fontFamily: 'Montserrat-Italic',
+              color: Color(0xFF4180A3),
             ),
           ),
           SizedBox(height: 20),
@@ -41,49 +44,75 @@ class LoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const textFieldColor = Color(0xFF4180A3);
+
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          TextField(
-            decoration: InputDecoration(
-              hintText: 'Username',
-              prefixIcon: const Icon(Icons.person),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(10.0),
+          const Center(
+            child: SizedBox(
+              width: 300, // Set the desired width here
+              height: 50, // Set the desired height here
+              child: TextField(
+                style: TextStyle(color: textFieldColor), // Set text color
+                decoration: InputDecoration(
+                  hintText: 'Username',
+                  hintStyle:
+                      TextStyle(color: textFieldColor), // Set hint text color
+                  prefixIcon: Icon(Icons.person,
+                      color: textFieldColor), // Set icon color
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(color: textFieldColor),
+                  ),
+                  filled: true,
+                  fillColor: Colors.white, // Set background color
+                ),
               ),
-              filled: true,
-              fillColor: Colors.grey[200],
             ),
           ),
           const SizedBox(height: 20),
-          TextField(
-            obscureText: true,
-            decoration: InputDecoration(
-              hintText: 'Password',
-              prefixIcon: const Icon(Icons.lock),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(10.0),
+          const Center(
+            child: SizedBox(
+              width: 300, // Set the desired width here
+              height: 50, // Set the desired height here
+              child: TextField(
+                style: TextStyle(color: textFieldColor), // Set text color
+                decoration: InputDecoration(
+                  hintText: 'Password',
+                  hintStyle:
+                      TextStyle(color: textFieldColor), // Set hint text color
+                  prefixIcon:
+                      Icon(Icons.lock, color: textFieldColor), // Set icon color
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(color: textFieldColor),
+                  ),
+                  filled: true,
+                  fillColor: Colors.white, // Set background color
+                ),
               ),
-              filled: true,
-              fillColor: Colors.grey[200],
             ),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 30),
           SizedBox(
-            width: double.infinity,
+            width: 100,
+            height: 40,
             child: ElevatedButton(
               onPressed: () {
                 // Add your login logic here
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
+                backgroundColor: const Color(0xFF4180A3),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0),
                 ),
               ),
-              child: const Text('Login', style: TextStyle(fontSize: 16)),
+              child: const Text('Login',
+                  style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.white,
+                      fontFamily: 'Montserrat')),
             ),
           ),
         ],
