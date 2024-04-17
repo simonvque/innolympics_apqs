@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:innolympics_apqs/login.dart';
+import 'package:innolympics_apqs/messages.dart';
 import 'package:innolympics_apqs/nav.dart';
+import 'package:innolympics_apqs/feed.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,12 +16,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'HealthLink',
+      title: 'Handy Manning',
       theme: ThemeData(
         appBarTheme: const AppBarTheme(color: Color(0xFF0079BD)),
       ),
       home: //DoctorNavigationMenu(),
-          const LoginPage(), //<------------------ change the class if you need to test
+          const NavBar(), //<------------------ change the class if you need to test
     );
   }
 }

@@ -1,29 +1,31 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
+import 'package:innolympics_apqs/feed.dart';
+import 'package:innolympics_apqs/login.dart';
+import 'package:innolympics_apqs/messages.dart';
 
-class Feed extends StatefulWidget {
-  const Feed({super.key});
+
+class NavBar extends StatefulWidget {
+  const NavBar({super.key});
 
   @override
-  State<Feed> createState() => _FeedState();
+  State<NavBar> createState() => _NavBarState();
 }
 
-class _FeedState extends State<Feed> {
+class _NavBarState extends State<NavBar> {
   int myIndex = 0;
 
-  final tabs = [
-    Center(child: Text('Home')),
-    Center(child: Text('Bookmarks')),
-    Center(child: Text('Messages')),
-    Center(child: Text('Post')),
+  List<Widget> tabs = [
+    HomePage(), 
+    Text('Bookmarks'),
+    ChatScreen(),
+    Text('Post'),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFEDEDED),
-      body: tabs[myIndex],
       appBar: AppBar(
         backgroundColor: Color(0xFF4180A3),
         title: Text('HANDY MANNING',
@@ -42,6 +44,7 @@ class _FeedState extends State<Feed> {
               ))
         ],
       ),
+      body: tabs[myIndex],
       bottomNavigationBar: BottomNavigationBar(
           unselectedItemColor: Color(0xFF4180A3),
           selectedItemColor: Color(0xFF4180A3),
