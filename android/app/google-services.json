@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "816793988009",
+    "project_id": "innolympics2024-apqs",
+    "storage_bucket": "innolympics2024-apqs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816793988009:android:7ab6206dc6b02a6fac32b8",
+        "android_client_info": {
+          "package_name": "com.example.innolympics_apqs"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-lKTtOlkdhb659HUgm9HICxGt5Nsj9oE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
