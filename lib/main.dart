@@ -14,11 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'HealthLink',
+      title: 'Handy Manning',
       theme: ThemeData(
         appBarTheme: const AppBarTheme(color: Color(0xFF0079BD)),
       ),
-      home: //DoctorNavigationMenu(),
+      home:
           const LoginPage(), //<------------------ change the class if you need to test
     );
   }
