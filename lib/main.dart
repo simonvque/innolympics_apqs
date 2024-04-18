@@ -1,7 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:innolympics_apqs/feed.dart';
 import 'package:innolympics_apqs/login.dart';
-
+import 'package:innolympics_apqs/nav.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

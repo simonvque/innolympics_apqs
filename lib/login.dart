@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:innolympics_apqs/auth_service.dart';
 import 'package:innolympics_apqs/feed.dart';
+import 'package:innolympics_apqs/nav.dart';
 import 'package:innolympics_apqs/signup.dart';
 
 class LoginPage extends StatelessWidget {
@@ -173,7 +174,6 @@ class _LoginFormState extends State<LoginForm> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    // Navigate to the sign-up page
                     Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -199,7 +199,7 @@ class _LoginFormState extends State<LoginForm> {
   goToHome(BuildContext context) => Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => const HomePage(),
+        builder: (context) => const NavBar(),
       ));
 
   _login() async {

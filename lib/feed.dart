@@ -10,39 +10,36 @@ class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
-  State<HomePage> createState()=> _HomeState();
-  
-  }
+  State<HomePage> createState() => _HomeState();
+}
 
 class _HomeState extends State<HomePage> {
-
   @override
-  Widget build(BuildContext context) { 
+  Widget build(BuildContext context) {
     return ListView.custom(
       childrenDelegate: SliverChildBuilderDelegate(
         (BuildContext context, int index) {
           return Card(
-            child: ListTile(
-              tileColor: Colors.white,
-              onTap:() {
-                 Navigator.of(context).push(MaterialPageRoute(
-                 builder:(BuildContext context)=>ListedPost()));
-              },
-              leading: const Icon(
-                Icons.bookmark_border_outlined,
-                color: Color(0xFF4180A3),
-                ),
-              trailing: const Icon(
-                Icons.arrow_forward,
-                color: Color(0xFF4180A3),
-                ),
-              title: Text(listings[index].job),
-              subtitle: Text(listings[index].desc),
-            )
-          );
+              child: ListTile(
+            tileColor: Colors.white,
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => ListedPost()));
+            },
+            leading: const Icon(
+              Icons.bookmark_border_outlined,
+              color: Color(0xFF4180A3),
+            ),
+            trailing: const Icon(
+              Icons.arrow_forward,
+              color: Color(0xFF4180A3),
+            ),
+            title: Text(listings[index].job),
+            subtitle: Text(listings[index].desc),
+          ));
         },
         childCount: listings.length,
       ),
     );
-      }
   }
+}
