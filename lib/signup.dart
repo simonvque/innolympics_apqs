@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:innolympics_apqs/auth_service.dart';
-import 'package:innolympics_apqs/home.dart';
+import 'package:innolympics_apqs/feed.dart';
 import 'package:innolympics_apqs/login.dart';
 
 class SignUpPage extends StatelessWidget {

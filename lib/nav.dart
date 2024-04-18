@@ -1,8 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
 import 'package:innolympics_apqs/feed.dart';
-import 'package:innolympics_apqs/login.dart';
 import 'package:innolympics_apqs/messages.dart';
+import 'package:innolympics_apqs/notifs.dart';
+import 'package:innolympics_apqs/post.dart';
+import 'package:innolympics_apqs/bookmarks.dart';
 
 
 class NavBar extends StatefulWidget {
@@ -17,9 +19,10 @@ class _NavBarState extends State<NavBar> {
 
   List<Widget> tabs = [
     HomePage(), 
-    Text('Bookmarks'),
+    Bookmarks(),
     ChatScreen(),
-    Text('Post'),
+    CreatePostPage(),
+    Notifications(),
   ];
 
   @override
@@ -84,6 +87,13 @@ class _NavBarState extends State<NavBar> {
                 color: Color(0xFF4180A3),
               ),
               label: 'Post',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.notifications,
+                color: Color(0xFF4180A3),
+              ),
+              label: 'Notifs',
             ),
           ]),
     );

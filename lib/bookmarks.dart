@@ -6,15 +6,15 @@ import 'package:innolympics_apqs/messages.dart';
 import 'package:innolympics_apqs/nav.dart';
 import 'listings.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class Bookmarks extends StatefulWidget {
+  const Bookmarks({super.key});
 
   @override
-  State<HomePage> createState()=> _HomeState();
+  State<Bookmarks> createState()=> _BookmarksState();
   
   }
 
-class _HomeState extends State<HomePage> {
+class _BookmarksState extends State<Bookmarks> {
 
   @override
   Widget build(BuildContext context) { 
@@ -29,19 +29,19 @@ class _HomeState extends State<HomePage> {
                  builder:(BuildContext context)=>ListedPost()));
               },
               leading: const Icon(
-                Icons.bookmark_border_outlined,
+                Icons.bookmark,
                 color: Color(0xFF4180A3),
                 ),
               trailing: const Icon(
                 Icons.arrow_forward,
                 color: Color(0xFF4180A3),
                 ),
-              title: Text(listings[index].job),
-              subtitle: Text(listings[index].desc),
+              title: Text(bookmarks[index].job),
+              subtitle: Text(bookmarks[index].desc),
             )
           );
         },
-        childCount: listings.length,
+        childCount: bookmarks.length,
       ),
     );
       }

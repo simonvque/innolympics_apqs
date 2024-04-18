@@ -1,17 +1,24 @@
 class Listings {
   final String job;
-  final String loc;
-  final int bookmark; 
   final String desc;
+  final String name; 
+  final String detail;
+  final String chat;
 
-  Listings(this.job, this.loc, this.bookmark, this.desc);
+  Listings(this.job, this.desc, this.name, this.detail, this.chat);
 }
 
 List listings = [
-  Listings('Plumber Urgently Needed!','Malate, NCR', 0,
-  'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
-  Listings('Looking for a Carpenter','Malate, NCR', 0,
-  'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
-  Listings('Are any cleaners available? Need assistance','Malate, NCR', 1,
-  'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum'),
+  Listings('Plumber Urgently Needed!','Offering 500 PHP', 'Juan De Los Santos',
+  '', 'Bookmarked your post'),
+  Listings('Looking for a Carpenter','Offering 1,500 PHP', 'Maria Aguinaldo',
+  '', 'Messaged you'),
+  Listings('Are any cleaners available? Need assistance','Roberto De La Cruz', 'Julia Alberto',
+  '', 'Messaged you'),
+];
+
+List bookmarks = [
+  Listings('Plumber Urgently Needed!','Offering 500 PHP','Juan De Los Santos',
+  'I recently installed a pipe and now its leaking from its base.'
+  ' I tried tightening its bolts but it keeps leaking. I am looking for a plumber who can help me', ''),
 ];
