@@ -1,9 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:innolympics_apqs/login.dart';
-import 'package:innolympics_apqs/nav.dart';
-import 'package:innolympics_apqs/post.dart';
-import 'package:innolympics_apqs/signup.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,7 +22,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(color: Color(0xFF0079BD)),
       ),
       home:
-          const CreatePostPage(), //<------------------ change the class if you need to test
+          const LoginPage(), //<------------------ change the class if you need to test
     );
   }
 }
